@@ -1,14 +1,13 @@
-const TWILIO_ACCOUNT_SID='AC00f3bc1d02254ed45495f4554c6a3ddd';
-const TWILIO_AUTH_TOKEN='35e4bc37f36052df5e4d9e1fa0c3737a';
-const TWILIO_PHONE_NUMBER='+19084021532';
+const dotenv = require('dotenv');
+dotenv.config({path: '.env'});
 
 
 const express = require('express');
 const bodyParser = require('body-parser');
 const pino = require('express-pino-logger')();
 const client = require('twilio')(
-    TWILIO_ACCOUNT_SID,
-    TWILIO_AUTH_TOKEN
+    process.env.TWILIO_SID,
+    process.env.TWILIO_TOKEN
 );
 
 var cors = require('cors');
@@ -32,12 +31,11 @@ app.options('*',cors());
 
 app.post('/api/messages', (req, res) => {
     res.header('Content-Type', 'application/json');
-    console.log(req);
     client.messages
       .create({
-        from: TWILIO_PHONE_NUMBER,
-        to: '9085528747',
-        body: 'fk me'
+        from: process.env.TWILIO_NUMBER,
+        to: req.body.phoneNumber,
+        body: 'Yooooo good to see you. *slaps face* but seriously tho '+req.body.name+', gimme my $' + req.body.cost+ ' dollars!'
       })
       .then(() => {
         res.send(JSON.stringify({ success: true }));

@@ -3,6 +3,8 @@
   position: fixed;
   flex-direction: column;
   text-align: center;
+  font-family: 'Lato', sans-serif;
+color:white;
 
   justify-content: center;
   align-items: center;
@@ -10,29 +12,33 @@
   width: 100%;
   height: 100%;
 
-  background-color: blue;}
+  background-image: linear-gradient(to bottom right, rgb(50,50,50) , #191414);
+
+}
 
 .TotalAmount{
 
   display: flex;
-  flex: .2;
+  flex: .1;
   justify-content: center;
   align-items: center;
-  background-color: red;
 
 }
 
 .Dashboard{
 
   display: flex;
-  flex: .8;
+  flex: .9;
   justify-content: center;
   align-items: center;
   width: 80%;
+  height: 100%;
+
   flex-direction: row;
+  overflow: auto;
 
 
-  background-color: orange;
+  background-color: rgb(200,200,200,.2);
 
 }
 
@@ -41,12 +47,14 @@
 
   display: flex;
   flex: .5;
-  justify-content: center;
   align-items: center;
   width: 80%;
   height: 80%;
+  flex-direction: column;
+  overflow: auto;
 
-  background-color: yellow;
+
+  background-color: rgb(40,40,40,.8);
 
 }
 
@@ -55,13 +63,103 @@
 
   display: flex;
   flex: .5;
-  justify-content: center;
+  
+  width: 100%;
+  height: 90%;
+  flex-direction: column;
+  overflow: auto;
+  position: relative;
   align-items: center;
-  width: 80%;
-  height: 80%;
 
-  background-color: magenta;
+  background-color: rgb(10,10,10,.5);
 
+}
+
+.title{
+width:70%;
+margin:30px;
+padding-left: 60px;
+float:left;
+text-align: left;
+font-size: 40px;
+}
+
+.title2{
+  width:70%;
+  margin:10px;
+  padding-left: 60px;
+  float:left;
+  text-align: left;
+  font-size: 30px;
+  color: rgb(230, 230,230);
+  }
+  
+p{
+  background-color: black;
+  font: inherit;
+
+}
+
+#totalRequestAmount{
+
+  font-size: 30px;
+
+}
+
+
+.createGroup{
+  background-color: rgb(200,200,200,.1);
+  text-align: left;
+  float:left;
+width:80%;
+}
+
+.addPerson{
+  background-color: rgb(200,200,200,.1);
+  text-align: left;
+  float:left;
+width:80%;
+}
+
+#addPerson{
+  padding: 10px;
+  font-size: 30px;
+}
+
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  font: inherit;
+
+}
+
+.input{
+  vertical-align: middle;
+  margin: 5px 10px 5px 10px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  font: inherit;
+
+}
+
+#groupAdd{
+padding: 10px;
+font-size: 30px;
+}
+
+li:hover {
+
+  background-color: rgb(255,255,255,.1);
+  cursor: pointer;
 
 }
 
@@ -69,3 +167,4 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+

@@ -7,6 +7,7 @@ export default class Person {
     constructor(name, phoneNumber) {
       this.name = name;
       this.phoneNumber = phoneNumber;
+      this.cost = 0;
     }
   
     setCost(cost){
