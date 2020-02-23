@@ -5,7 +5,7 @@ import './App.css';
 import Group from './Group.js'; 
 import Person from './Person.js'; 
 
-class App extends Component {
+class App extends Component { 
 
   constructor(){
 
