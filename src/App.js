@@ -20,7 +20,8 @@ class App extends Component {
       groupName:'',
       name:'',
       phoneNumber:'',
-      name:''
+      name:'',
+      accountNum: '',
 
     }
 
@@ -114,7 +115,8 @@ class App extends Component {
     console.log(data);
 
     this.setState({
-      name: data.first_name + " " + data.last_name
+      name: data.first_name + " " + data.last_name,
+      accountNum: data._id
     })
 
 
@@ -379,6 +381,12 @@ class App extends Component {
           <div className = "title3">
 
           Name: {this.state.name}
+
+          </div>
+
+          <div className = "title3">
+
+            Account Number: {this.state.accountNum}
 
           </div>
 
