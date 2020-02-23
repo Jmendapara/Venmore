@@ -93,6 +93,20 @@ font-size: 40px;
   font-size: 30px;
   color: rgb(230, 230,230);
   }
+
+.title3{
+
+  width:70%;
+  margin:10px;
+  padding-left: 60px;
+  float:left;
+  text-align: left;
+  font-size: 30px;
+  color: rgb(230, 230,230);
+
+
+
+}
   
 p{
   background-color: black;

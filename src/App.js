@@ -19,7 +19,8 @@ class App extends Component {
       calculatedCost:'',
       groupName:'',
       name:'',
-      phoneNumber:''
+      phoneNumber:'',
+      name:''
 
     }
 
@@ -103,6 +104,26 @@ class App extends Component {
    
    
    ;
+
+   fetch('http://api.reimaginebanking.com/customers/5e518aa9322fa016762f39e0?key=72db40bd065c29df9cdd263762a8639b')
+   .then(results => {
+      return results.json();
+
+   }).then(data => {
+
+    console.log(data);
+
+    this.setState({
+      name: data.first_name + " " + data.last_name
+    })
+
+
+   })
+
+
+
+
+
 
 
 
@@ -339,6 +360,8 @@ class App extends Component {
 
         <div className="TotalAmount">
 
+
+
           <form onSubmit={this.handleSubmit}>
             <label>
              Total Amount: 
@@ -352,12 +375,19 @@ class App extends Component {
         <div className="Dashboard">
           
           <div className="Groups">
+          
+          <div className = "title3">
+
+          Name: {this.state.name}
+
+          </div>
 
           <div className = "title2">
               
           Total Bill: {this.state.totalCost}
 
               </div>
+     
 
             <div className = "title">
               
