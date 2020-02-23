@@ -1,0 +1,71 @@
+.App {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  text-align: center;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: blue;}
+
+.TotalAmount{
+
+  display: flex;
+  flex: .2;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+
+}
+
+.Dashboard{
+
+  display: flex;
+  flex: .8;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  flex-direction: row;
+
+
+  background-color: orange;
+
+}
+
+.Groups{
+
+
+  display: flex;
+  flex: .5;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+
+  background-color: yellow;
+
+}
+
+
+.People{
+
+  display: flex;
+  flex: .5;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+
+  background-color: magenta;
+
+
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
