@@ -9,7 +9,7 @@
     "express-pino-logger": "^4.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "0.9.5",
+    "react-scripts": "5.0.1",
     "twilio": "^3.39.5"
   },
   "devDependencies": {},
